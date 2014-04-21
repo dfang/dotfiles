@@ -1,0 +1,17 @@
+*~
+.DS_Store
+node_modules
+bower_components
+
+# Vim
+*.swp
+*.swo
+
+# RubyMine
+.idea
+
+# sass
+.sass-cache
+.sass-cache/*
+
+config/database.yml
