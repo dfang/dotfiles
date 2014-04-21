@@ -1,0 +1,114 @@
+#!/bin/bash
+
+sudo -v # ask for password only at the beginning
+
+brew update
+brew upgrade
+
+brew tap homebrew/versions
+brew tap phinze/homebrew-cask
+
+brew install brew-cask
+
+brew cask install alfred
+brew cask alfred link
+
+# brew install bash
+
+brew install zsh
+
+brew install fasd
+brew install ssh-copy-id
+brwe install the_silver_searcher
+brew install tree
+brew install ack
+brew install editorconfig
+brew install git
+brew install tig
+brew install hub
+brew install --zsh-completion git-now
+brew install legit
+legit install
+
+
+brew install openssl
+brew install readline
+brew install tmux
+brew install vim
+brew install curl
+brew install wget --enable-iri
+
+# brew install imagesnap
+# sudo ln -s /usr/local/bin/imagesnap /usr/bin/
+
+brew install node
+brew install nginx
+brew install sqlite
+brew install mysql
+brew install redis
+brew install mongodb
+brew install postgresql
+brew install heroku-toolbelt
+brew install awscli
+brew install google-sql-tool
+# brew install berkeley-db
+
+brew install mobile-shell
+brew install v8
+brew install zsync
+
+
+brew install rbenv ruby-build rbenv-readline rbenv-gem-rehash rbenv-default-gems rbenv-gemset rbenv-use rbenv-bundler
+
+sudo ln -sf /Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl /usr/bin/sb
+
+rbenv install 2.2.0-dev
+
+brew install fsharp
+brew install typescript
+brew install erlang
+brew install elixir
+brew install go
+
+brew install imagemagick
+brew install sphinx
+brew install solr
+brew install elasticsearch
+# brew install phantomjs
+# brew install qt
+
+brew cask install google-chrome
+brew cask install skype
+
+brew cask install onepassword
+
+brew cask install firefox
+brew cask install virtualbox
+brew cask install vagrant
+brew cask install sourcetree
+
+brew cask install mou
+brew cask install iterm2
+brew cask install dropbox
+brew cask install evernote
+brew cask install bartender
+brew cask install f-lux
+brew cask install transmit
+brew cask install transmission
+brew cask install macvim
+
+
+brew cask install sequel-pro
+brwe cask install navicat-for-postgresql
+brew cask install clean-my-mac
+brew cask install the-unarchiver
+brew cask install mplayerx
+brew cask install vlc
+brew cask install charles
+brew cask install instacast
+brew cask install bittorrent-sync
+brew cask install growlnotify
+brew cask install rubymine
+brew cask install rdio
+
+brew cleanup
