@@ -1,1 +1,7 @@
 --skip-bundle
+--skip-test-unit
+
+
+# loggers
+ActiveRecord::Base.logger     = Logger.new STDOUT
+ActionController::Base.logger = Logger.new STDOUT
