@@ -1,0 +1,2 @@
+# skip bundle install when rails new
+--skip-bundle
