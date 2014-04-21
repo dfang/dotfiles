@@ -47,3 +47,4 @@ To open your default editor in the root of a castle (the $EDITOR environment var
 [homesick@github](https://github.com/technicalpickles/homesick)  
 [manage and share your dotfiles with homesick](https://mug.im/manage-and-share-your-dotfiles-with-homesick/)  
 [how-to-setup-your-mac-automatically-with-chef](https://mug.im/how-to-setup-your-mac-automatically-with-chef/)
+[dotfiles.github.io](http://dotfiles.github.io)
