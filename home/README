@@ -1,0 +1,27 @@
+we don't need to care about these dofiles
+
+.bash_history
+.zsh_history
+.psql_history
+.sqlite_history
+.mysql_history
+
+.subversion
+
+.berkshelf
+.chef
+.heroku
+.dropbox
+.fasd
+.cache
+.viminfo
+
+.atom
+.gem
+.rbenv
+.vagrant.d
+
+
+if [ -f `brew --prefix`/etc/bash_completion ]; then
+  . `brew --prefix`/etc/bash_completion
+fi

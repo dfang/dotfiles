@@ -1,0 +1,11 @@
+# flush dns in mountain lion
+alias flush_dns="sudo killall -HUP mDNSResponder"
+
+# show hidden files in finder
+alias show_hidden_files="defaults write com.apple.finder AppleShowAllFiles TRUE"
+
+# restart dock, you can kill finder by using killall Finder
+alias restart_dock="killall Dock"
+
+# http://osxdaily.com/2010/05/06/speed-up-a-slow-terminal-by-clearing-log-files
+alias speedup='sudo rm /private/var/log/asl/＊.asl'

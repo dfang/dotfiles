@@ -1,0 +1,188 @@
+alias zshconfig="sb ~/.zshrc"
+alias ohmyzsh="sb ~/.oh-my-zsh"
+
+alias sl='ls' # fix typo
+alias l="ls -alh"
+alias b='bundle'
+alias bi='bundle install'
+alias bu='bundle update'
+alias be='bundle exec'
+alias r="rails"
+alias rk="rake"
+alias rs="rails s"
+alias ts='thin start'
+alias fs="foreman start"
+alias rc="rails c"
+alias rdb="rails db"
+alias rr="rake routes"
+alias rg='rails generate'
+alias rgm='rails generate migration'
+alias rgr='rails generate resource'
+alias rgg='rails generate generator'
+alias rgs='rails generate scafold'
+alias rgo='rails generate observer'
+alias rgt='rails generate task'
+alias rga='rails generate assets'
+alias rgc='rails generate controller'
+alias rgh='rails generate helper'
+alias rgu='rails generate uploader'
+alias rdd="rake db:drop"
+alias zrdd="zeus rake db:drop"
+alias rdc="rake db:create"
+alias zrdc="zeus rake db:create"
+alias rdm="rake db:migrate"
+alias zrdm="zeus rake db:migrate"
+alias rdms="rake db:migrate:status"
+alias rdr="rake db:rollback"
+alias zrdr="zeus rake db:rollback"
+alias rds="rake db:seed"
+alias zrds="zeus rake db:seed"
+alias rdst='rake db:setup'
+alias zrdst='zeus rake db:setup'
+alias rdrst='rake db:reset'
+alias zrdrst='zeus rake db:reset'
+alias rkmw='rake middleware'
+alias zrkmw='zrake middleware'
+
+alias zrg='zeus rails g'
+alias zrk='zeus rake'
+alias zc='zeus c'
+alias zs='zeus s'
+alias zg='zeus g'
+alias zd='zeus d'
+alias zdb='zeus dbconsole'
+# zeus rake db:drop && zeus rake db:create && zeus rake db:migrate
+
+alias migrate='rake db:migrate; rake db:migrate RAILS_ENV=test'
+
+alias o="open"
+alias cstart="consular start"
+alias cedit="consular edit"
+
+# -------------------------------------------------------------------
+# Git aliases
+# -------------------------------------------------------------------
+alias g="git"
+alias gcl='git clone'
+alias ga='git add'
+alias gl='git log'
+alias gs='git status'
+alias gst='git status'
+alias gsh='git show'
+alias gd='git diff'
+alias gdw='git diff --word-diff'
+alias gdc='git diff --cached'
+alias gds='git diff --stat'
+alias gdh='git diff HEAD'
+alias gb='git branch'
+alias gba='git branch -a'
+alias gco='git checkout'
+alias gci='git commit'
+alias gm='git commit -m'
+alias gma='git commit -am'
+alias gr='git remote'
+alias grv='git remote -v'
+alias gpl='git pull'
+alias gps='git push'
+alias gsl='git stash list'
+alias gss='git stash save'
+alias gsp='git stash pop'
+
+alias grc='git rebase --continue'
+alias grs='git rebase --skip'
+alias gra='git rebase --abort'
+
+alias gitx='open -a GitX .'
+alias glast='git log -n 1'
+
+alias glo="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
+
+alias v="vagrant"
+alias pid="ps aux | grep $1"
+
+alias rap="rake assets:precompile"
+alias capd="cap deploy"
+alias cappd="cap production deploy"
+alias capsd="cap staging deploy"
+
+alias reload="source ~/.zshrc"
+alias reload!="source ~/.zshrc"
+alias :q='exit' # vim style quit
+alias quit='exit' # vim style quit
+alias cls='clear'
+
+# if not passing arguments , just ssh-copy-id default public key
+# alias ssh-copy-id="ssh-copy-id -i ~/.ssh/id_rsa.pub $1"
+# generate public key from private key and print it to stdout
+# ssh-keygen -y -f /path/to/private/key
+
+alias lf='ls *(.)' # list just files
+alias ld='ls *(/)' # list just directories *N*
+
+# To list only matching dot files , add -maxdepth 1 to not walk into path recursively
+# find . -type f -name ".*" -maxdepth 1
+
+# To list only matching dot directories
+# find . -type d -name ".*" -maxdepth 1
+
+alias tlog='tail -f log/development.log'
+alias ctlog='cp /dev/null log/development.log && tail -f log/development.log' # clear and tail log
+alias devlog='tail -f log/development.log'
+alias testlog='tail -f log/test.log'
+alias prodlog='tail -f log/production.log'
+
+# check if a command is available
+function command_exists() { which "$1" >/dev/null 2>/dev/null }
+
+if command_exists vim; then
+  alias vi='vim'
+fi
+
+alias etc='cd /etc'
+alias nr='sudo /usr/local/sbin/nginx -s reload'
+alias nt='sudo /usr/local/sbin/nginx -t'
+alias nginxconf='sudo vi /usr/local/etc/nginx/nginx.conf'
+alias apacheconf='sudo vi /etc/apache2/httpd.conf'
+alias zshrc='vi ~/.zshrc; source ~/.zshrc'
+alias ohmyzsh='vi ~/.oh-my-zsh'
+alias vimrc='vi ~/.vimrc; source ~/.vimrc'
+alias bashrc='vi ~/.bashrc; source ~/.bashrc'
+
+alias pid='ps aux | grep -v grep | grep $1'
+alias pyserver='python -m SimpleHTTPServer $1'
+alias header='curl -I $1'
+function myip(){
+  echo 'your local ip is :'
+  ifconfig | grep 'inet ' | grep -v 127.0.0.1 | cut -d\  -f2
+  echo 'your external ip is :'
+  curl icanhazip.com
+  echo ''
+}
+alias ip=myip
+
+# project alias, use autojump instead
+alias dev='cd ~/Development'
+
+alias ssh-alias='cat ~/.ssh_aliases'
+alias ssh-keys='ls -l ~/.ssh'
+
+# snippets
+# cmap w!! %!sudo tee > /dev/null %
+# sudo chown -R `whoami` /usr/local
+# rsync -av
+
+function mcd(){
+  echo "make a new directory $1, then cd into it"
+  mkdir $1
+  cd $1
+}
+
+# search in all bundled gems, very useful when hacking source code
+# http://stackoverflow.com/questions/20044173/there-a-way-to-search-all-bundled-gems-project-directories
+# http://andre.arko.net/2013/05/10/hack-your-bundle-for-fun-and-profit/
+# ags 'pattern'  search in bundled gem source code(source code in current project folder is not included)
+# ag 'pattern'  search only in current project
+# ag is case sensitive by default, so use -S(smart case)
+function ags () {
+  ag -S "$@" `bundle show --paths`
+}
