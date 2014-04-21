@@ -1,5 +1,0 @@
-# skip Rdoc Generation when gem install
-gem: --no-ri --no-rdoc
-# skip Rdoc Generation when gem install or update using rvm
-install: --no-ri --no-rdoc
-update:  --no-ri --no-rdoc
