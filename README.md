@@ -43,6 +43,35 @@ To open your default editor in the root of a castle (the $EDITOR environment var
 
 `homesick open CASTLE`
 
+# INSTALLATION
+
+first,
+```
+brew install zsh fish
+```
+
+then
+```
+git clone http://github.com/dfang/oh-my-zsh.git ~/.oh-my-zsh  
+git clone git://github.com/bpinto/oh-my-fish.git ~/.oh-my-fish  
+```
+
+then
+```
+homesick symlink CASTLE
+```
+wanna make zsh as default shell ?
+```
+chsh -s /bin/zsh
+```
+wanna make fish as default shell ?
+```
+sudo vi /etc/shells
+append fish to last line
+chsh -s /usr/local/bin/fish
+```
+
+
 ###for more, open links
 [homesick@github](https://github.com/technicalpickles/homesick)  
 [manage and share your dotfiles with homesick](https://mug.im/manage-and-share-your-dotfiles-with-homesick/)  
