@@ -2,19 +2,20 @@ alias zshconfig="sb ~/.zshrc"
 alias ohmyzsh="sb ~/.oh-my-zsh"
 
 alias sl='ls' # fix typo
-alias l="ls -alh"
+alias l='ls -alh'
 alias b='bundle'
 alias bi='bundle install'
 alias bu='bundle update'
 alias be='bundle exec'
-alias r="rails"
-alias rk="rake"
-alias rs="rails s"
+alias bo='bundle open'
+alias r='rails'
+alias rk='rake'
+alias rs='rails s'
 alias ts='thin start'
-alias fs="foreman start"
-alias rc="rails c"
-alias rdb="rails db"
-alias rr="rake routes"
+alias fs='foreman start'
+alias rc='rails c'
+alias rdb='rails db'
+alias rr='rake routes'
 alias rg='rails generate'
 alias rgm='rails generate migration'
 alias rgr='rails generate resource'
@@ -24,19 +25,20 @@ alias rgo='rails generate observer'
 alias rgt='rails generate task'
 alias rga='rails generate assets'
 alias rgc='rails generate controller'
+alias rgce='rails generate cell'
 alias rgh='rails generate helper'
 alias rgu='rails generate uploader'
-alias rdd="rake db:drop"
-alias zrdd="zeus rake db:drop"
-alias rdc="rake db:create"
-alias zrdc="zeus rake db:create"
-alias rdm="rake db:migrate"
-alias zrdm="zeus rake db:migrate"
-alias rdms="rake db:migrate:status"
-alias rdr="rake db:rollback"
-alias zrdr="zeus rake db:rollback"
-alias rds="rake db:seed"
-alias zrds="zeus rake db:seed"
+alias rdd='rake db:drop'
+alias zrdd='zeus rake db:drop'
+alias rdc='rake db:create'
+alias zrdc='zeus rake db:create'
+alias rdm='rake db:migrate'
+alias zrdm='zeus rake db:migrate'
+alias rdms='rake db:migrate:status'
+alias rdr='rake db:rollback'
+alias zrdr='zeus rake db:rollback'
+alias rds='rake db:seed'
+alias zrds='zeus rake db:seed'
 alias rdst='rake db:setup'
 alias zrdst='zeus rake db:setup'
 alias rdrst='rake db:reset'
@@ -55,14 +57,14 @@ alias zdb='zeus dbconsole'
 
 alias migrate='rake db:migrate; rake db:migrate RAILS_ENV=test'
 
-alias o="open"
+alias o='open'
 alias cstart="consular start"
 alias cedit="consular edit"
 
 # -------------------------------------------------------------------
 # Git aliases
 # -------------------------------------------------------------------
-alias g="git"
+alias g='git'
 alias gcl='git clone'
 alias ga='git add'
 alias gl='git log'
