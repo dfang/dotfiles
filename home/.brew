@@ -76,6 +76,7 @@ brew install imagemagick
 brew install sphinx
 brew install solr
 brew install elasticsearch
+brew install graphviz
 # brew install phantomjs
 # brew install qt
 
@@ -90,6 +91,8 @@ brew cask install vagrant
 brew cask install sourcetree
 
 brew cask install mou
+brew cask install bartender
+brew cask install balsamiq-mockups
 brew cask install iterm2
 brew cask install dropbox
 brew cask install evernote

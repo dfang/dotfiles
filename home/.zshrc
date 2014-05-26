@@ -1,9 +1,7 @@
-# Path to your oh-my-zsh configuration.
 ZSH=$HOME/.oh-my-zsh
 # themes = (gozilla af-magic kolo bira wedisagree mgutz kennethreitz lambda imajes crcandy dstufft ys theunraveler frisk)
-ZSH_THEME="ys"
+ZSH_THEME="muse"
 
-# Set to this to use case-sensitive completion
 # CASE_SENSITIVE="true"
 DISABLE_AUTO_UPDATE="true"
 DISABLE_CORRECTION="true"
@@ -13,11 +11,12 @@ DISABLE_UNTRACKED_FILES_DIRTY="true"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git)
-plugins=(homesick git brew gem knife history history-substring-search node npm bower vagrant themes berks extract)
+# include osx plugin to support open same directory in teminal http://goo.gl/vM76Gy
+plugins=(homesick osx git brew gem knife history history-substring-search node npm bower vagrant themes berks extract)
 
 # amend the path, for more http://daniel.hepper.net/blog/2011/02/change-order-of-path-entries-on-mac-os-x/
 # you can edit /etc/paths file manually, or amend path here
-export PATH="/usr/local/bin:/usr/local/sbin:$PATH"
+export PATH="~/bin:/usr/local/bin:/usr/local/sbin:$PATH"
 
 source $ZSH/oh-my-zsh.sh
 
@@ -29,14 +28,14 @@ source $ZSH/oh-my-zsh.sh
 # no matter how installed rbenv(by git clone or brew), first make sure which rbenv is executable
 # then make sure shims comes before rbenv command in PATH
 # add support for Homebrew installed rbenv, it does # export PATH="$HOME/.rbenv/shims:$PATH"
-if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
+# add --no-rehash to speedup coderwall.com/p/j6cjnq
+if which rbenv > /dev/null; then eval "$(rbenv init - --no-rehash)"; fi
 
 # add npm support
 export PATH="/usr/local/share/npm/bin:$PATH"
 
-# this loads NVM
-# [[ -s $HOME/.nvm/nvm.sh ]] && . $HOME/.nvm/nvm.sh
-[[ -s $(brew --prefix nvm)/nvm.sh ]] && source $(brew --prefix nvm)/nvm.sh # this loads brew-installed nvm
+# this loads brew-installed nvm
+[[ -s $(brew --prefix nvm)/nvm.sh ]] && source $(brew --prefix nvm)/nvm.sh
 
 # this loads fasd
 eval "$(fasd --init auto)"
@@ -49,3 +48,12 @@ export AWS_CONFIG_FILE="~/.AWS_Config"
 if [[ $TERM == 'dumb' ]]; then
   export RPS1="\n\w\n\u $ "
 fi
+
+# http://github.com/sstephenson/rbenv/wiki/Understanding-binstubs#adding-project-specific-binstubs-to-path
+#export PATH="$PWD/bin:$PATH"
+#hash -r 2>/dev/null || true
+
+export PATH="./bin:$PATH"
+
+# add direnv support
+# eval "$(direnv hook zsh)"
