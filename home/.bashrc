@@ -12,3 +12,7 @@ alias rm='rm -i'
 
 alias la='ls -a'
 alias ll='ls -l'
+
+# add direnv support
+eval "$(direnv hook bash)"
+
