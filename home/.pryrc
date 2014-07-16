@@ -14,3 +14,9 @@ class Hash
     Hash[Array.toy(n).zip(Array.toy(n) {|c| (96 + ( c + 1)).chr})]
   end
 end
+
+if defined? FactoryGirl
+  # include shortcuts so that you don't need to type so much
+  # build(:bookmark) now equals FactoryGirl::Factory.build(:bookmark)
+  include FactoryGirl::Syntax::Methods
+end

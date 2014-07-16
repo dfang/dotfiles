@@ -1,0 +1,51 @@
+brew cask install iterm2
+brew cask install atom
+
+brew cask install google-chrome
+brew cask install onepassword
+brew cask install dropbox
+brew cask install evernote
+brew cask install skype
+brew cask install qq
+brew cask install wechat
+brew cask install cloud
+brew cask install thunder
+
+
+brew cask install virtualbox
+brew cask install vagrant
+brew cask install boot2docker
+brew install docker
+brew install packer
+
+brew cask install firefox
+brew cask install sourcetree
+
+brew cask install mou
+brew cask install fluid
+brew cask install brackets
+brew cask install bartender
+brew cask install balsamiq-mockups
+
+brew cask install bartender
+brew cask install f-lux
+brew cask install transmit
+
+brew cask install macvim
+brew cask install transmission
+
+brew cask install sequel-pro
+# brew cask install navicat-for-postgresql
+brew cask install clean-my-mac
+brew cask install the-unarchiver
+brew cask install mplayerx
+brew cask install handbrake
+brew cask install vlc
+brew cask install charles
+brew cask install instacast
+brew cask install bittorrent-sync
+brew cask install growlnotify
+brew cask install rubymine
+brew cask install rdio
+
+# brew cleanup

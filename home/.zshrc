@@ -57,3 +57,21 @@ export PATH="./bin:$PATH"
 
 # add direnv support
 # eval "$(direnv hook zsh)"
+#
+alias capd='cap deploy && sleep 20 && cap deploy:reindex'
+alias csdpl='cap staging db:pull'
+alias csdps='cap staging db:push'
+export VISUAL='sb'
+
+
+
+function check()
+{
+   echo ……… Check video integrity………….
+   ffmpeg -v 5 -i $1 -f null
+}
+
+export DOCKER_HOST=tcp://:4243
+alias d='docker'
+alias bd='boot2docker'
+
