@@ -1,6 +1,6 @@
 ZSH=$HOME/.oh-my-zsh
 # themes = (gozilla af-magic kolo bira wedisagree mgutz kennethreitz lambda imajes crcandy dstufft ys theunraveler frisk)
-ZSH_THEME="muse"
+ZSH_THEME="ys"
 
 # CASE_SENSITIVE="true"
 DISABLE_AUTO_UPDATE="true"
@@ -8,9 +8,6 @@ DISABLE_CORRECTION="true"
 COMPLETION_WAITING_DOTS="true"
 DISABLE_UNTRACKED_FILES_DIRTY="true"
 
-# Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
-# Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
-# Example format: plugins=(rails git)
 # include osx plugin to support open same directory in teminal http://goo.gl/vM76Gy
 plugins=(homesick osx git brew gem knife history history-substring-search node npm bower vagrant themes berks extract)
 
@@ -36,6 +33,7 @@ export PATH="/usr/local/share/npm/bin:$PATH"
 
 # this loads brew-installed nvm
 [[ -s $(brew --prefix nvm)/nvm.sh ]] && source $(brew --prefix nvm)/nvm.sh
+export NVM_DIR=~/.nvm
 
 # this loads fasd
 eval "$(fasd --init auto)"
@@ -57,21 +55,43 @@ export PATH="./bin:$PATH"
 
 # add direnv support
 # eval "$(direnv hook zsh)"
-#
+
 alias capd='cap deploy && sleep 20 && cap deploy:reindex'
 alias csdpl='cap staging db:pull'
 alias csdps='cap staging db:push'
 export VISUAL='sb'
 
-
-
 function check()
 {
-   echo ……… Check video integrity………….
+   echo ……… Check video integrity using ffmpeg ………….
    ffmpeg -v 5 -i $1 -f null
 }
 
 export DOCKER_HOST=tcp://:4243
 alias d='docker'
 alias bd='boot2docker'
+
+source ~/.autoenv/activate.sh
+
+# http://stackoverflow.com/questions/9872411/how-to-open-terminal-at-last-open-directory
+# defaults write com.apple.Terminal NSQuitAlwaysKeepsWindows -bool true
+
+export DOCKER_HOST=tcp://192.168.59.103:2375
+
+function letsgo(){
+mkdir -p src pkg bin
+export GOPATH=$PWD
+export PATH=$PATH:$GOPATH/bin
+mkdir -p $GOPATH/src/github.com/dfang/main
+touch $GOPATH/src/github.com/dfang/main/main.go
+(cat << EOF
+package main
+import "fmt"
+
+func main(){
+  fmt.Printf("Hello, world.\n")
+}
+EOF
+) > $GOPATH/src/github.com/dfang/main/main.go
+}
 
