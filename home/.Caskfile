@@ -1,5 +1,6 @@
 brew cask install iterm2
 brew cask install atom
+brew cask install safaritabswitching
 
 brew cask install google-chrome
 brew cask install onepassword
