@@ -31,6 +31,7 @@ alias rgu='rails generate uploader'
 alias rdd='rake db:drop'
 alias rdc='rake db:create'
 alias rdm='rake db:migrate'
+alias rdmr='rake db:migrate:redo'
 alias rdms='rake db:migrate:status'
 alias rdr='rake db:rollback'
 alias rds='rake db:seed'
@@ -162,3 +163,9 @@ function docsets(){
 }
 
 alias www='cd /usr/local/var/www'
+
+alias cs='consular start'
+alias ce='consular edit'
+alias c='consular'
+export EDITOR='sb'
+export VIEDITOR='sb'

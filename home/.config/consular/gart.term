@@ -1,0 +1,19 @@
+directory = '~/Development/Work/gart360-web'
+url = 'http://127.0.0.1:3000'
+
+before { run "cd #{directory}" }
+
+Consular.configure do |c|
+  c.default_editor = 'sb'
+end
+
+run 'fs'
+
+tab do
+  run "tlog"
+end
+
+tab do
+  run "sb ."
+  run "open #{url}"
+end

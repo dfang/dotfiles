@@ -1,0 +1,20 @@
+directory = '/Users/dfang/Development/Projects/ArtOfLife'
+url = 'http://127.0.0.1:3000'
+
+before { run "cd #{directory}" }
+
+Consular.configure do |c|
+  c.default_editor = 'sb'
+end
+
+run 'r s'
+
+tab do
+  run "tlog"
+end
+
+tab do
+  run "sb ."
+  run "sleep 3" # seconds
+  run "open #{url}"
+end

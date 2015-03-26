@@ -7,13 +7,28 @@ set fish_theme robbyrussell
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-fish/plugins/*)
 # Custom plugins may be added to ~/.oh-my-fish/custom/plugins/
 # Example format: set fish_plugins autojump bundler
-set fish_plugins z
+set fish_plugins autojump brew node
 
 # Path to your custom folder (default path is $FISH/custom)
 #set fish_custom $HOME/dotfiles/oh-my-fish
 
 # Load oh-my-fish configuration.
 . $fish_path/oh-my-fish.fish
+
+# if we use brew rbenv plugin, we don't need amend the PATH manully
+# set -x PATH /usr/local/bin $PATH
+# _append_path /usr/local/bin
+# set PATH /usr/local/bin $PATH
+# set PATH ~/.rbenv/shims $PATH
+# set PATH $HOME/.rbenv/bin $PATH
+# enable rbenv shell command support for fish, https://medium.com/p/9acf8c505796
+. (rbenv init -|psub)
+
+
+set PATH ./bin $PATH
+
+# add direnv support
+eval (direnv hook fish)
 
 alias reload='source ~/.config/fish/config.fish'
 alias r='rails'

@@ -25,3 +25,6 @@ we don't need to care about these dofiles
 if [ -f `brew --prefix`/etc/bash_completion ]; then
   . `brew --prefix`/etc/bash_completion
 fi
+
+http://macshuo.com/?p=676
+http://doabit.com/posts/3-from-oh-my-zsh-to-oh-my-fish
