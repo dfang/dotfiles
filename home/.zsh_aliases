@@ -136,14 +136,7 @@ alias bashrc='vi ~/.bashrc; source ~/.bashrc'
 alias pid='ps aux | grep -v grep | grep $1'
 alias pyserver='python -m SimpleHTTPServer $1'
 alias header='curl -I $1'
-function myip(){
-  echo 'your local ip is :'
-  ifconfig | grep 'inet ' | grep -v 127.0.0.1 | cut -d\  -f2
-  echo 'your external ip is :'
-  curl icanhazip.com
-  echo ''
-}
-alias ip=myip
+
 
 # project alias, use autojump instead
 alias dev='cd ~/Development'
@@ -156,18 +149,16 @@ alias ssh-keys='ls -l ~/.ssh'
 # sudo chown -R `whoami` /usr/local
 # rsync -av
 
-function mcd(){
-  echo "make a new directory $1, then cd into it"
-  mkdir $1
-  cd $1
+alias m="git add .;git commit -m" # Add and commit changes with Git
+alias gfl="git fetch && git lg" # Git fetch and show log
+
+function bra(){
+ open -a Brackets $1
 }
 
-# search in all bundled gems, very useful when hacking source code
-# http://stackoverflow.com/questions/20044173/there-a-way-to-search-all-bundled-gems-project-directories
-# http://andre.arko.net/2013/05/10/hack-your-bundle-for-fun-and-profit/
-# ags 'pattern'  search in bundled gem source code(source code in current project folder is not included)
-# ag 'pattern'  search only in current project
-# ag is case sensitive by default, so use -S(smart case)
-function ags () {
-  ag -S "$@" `bundle show --paths`
+function docsets(){
+  cd ~/Dropbox/PREFRENCES/Dash/docsets/
+  open ~/Dropbox/PREFRENCES/Dash/docsets/
 }
+
+alias www='cd /usr/local/var/www'

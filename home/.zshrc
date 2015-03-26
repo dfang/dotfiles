@@ -56,42 +56,41 @@ export PATH="./bin:$PATH"
 # add direnv support
 # eval "$(direnv hook zsh)"
 
-alias capd='cap deploy && sleep 20 && cap deploy:reindex'
 alias csdpl='cap staging db:pull'
 alias csdps='cap staging db:push'
 export VISUAL='sb'
 
-function check()
-{
-   echo ……… Check video integrity using ffmpeg ………….
-   ffmpeg -v 5 -i $1 -f null
-}
-
-export DOCKER_HOST=tcp://:4243
-alias d='docker'
-alias bd='boot2docker'
-
-source ~/.autoenv/activate.sh
+#source ~/.autoenv/activate.sh
 
 # http://stackoverflow.com/questions/9872411/how-to-open-terminal-at-last-open-directory
 # defaults write com.apple.Terminal NSQuitAlwaysKeepsWindows -bool true
 
+export DOCKER_HOST=tcp://:4243
+alias d='docker'
+alias bd='boot2docker'
 export DOCKER_HOST=tcp://192.168.59.103:2375
 
-function letsgo(){
-mkdir -p src pkg bin
-export GOPATH=$PWD
+
+# export PATH=$PATH:/usr/local/opt/go/libexec/bin
+export GOBIN=`go env GOROOT`/bin
+export GOPATH=$HOME/go
+export GOBIN=$GOPATH/bin:$GOBIN
 export PATH=$PATH:$GOPATH/bin
-mkdir -p $GOPATH/src/github.com/dfang/main
-touch $GOPATH/src/github.com/dfang/main/main.go
-(cat << EOF
-package main
-import "fmt"
 
-func main(){
-  fmt.Printf("Hello, world.\n")
-}
-EOF
-) > $GOPATH/src/github.com/dfang/main/main.go
-}
 
+[[ -f $HOME/.zsh_util.zsh ]] && source $HOME/.zsh_util.zsh
+
+
+rbenv shell 2.1.4
+nvm use 0.11.14
+
+
+# about passing args to rake task, cap task in zshell
+# in zsh: noglob option, in action. Rake tasks can take arguments in hard brackets. These brackets have special meaning in zsh. So, either turn off the special expansion stuff (noglob) or escape the brackets.
+# https://robots.thoughtbot.com/how-to-use-arguments-in-a-rake-task
+# http://dev.scottw.com/zsh-rake-parameters
+# so you don't need to run like cap production "invoke:rake[db:drop]", just cap production invoke:rake[db:drop]
+
+# normally there are two ways to passing args to rake task
+# https://itshouldbeuseful.wordpress.com/2011/11/07/passing-parameters-to-a-rake-task/
+# rake say_hello[eddie], or rake say_hello NAME='eddie'

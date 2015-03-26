@@ -20,3 +20,7 @@ Termfile
 .env
 .envrc
 
+
+lib/rails
+lib/generators
+lib/templates

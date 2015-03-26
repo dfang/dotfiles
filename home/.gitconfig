@@ -37,7 +37,10 @@
   publish = !legit publish \"$@\"
   graft = !legit graft \"$@\"
   today = log --since=midnight --author='dfang' --oneline
-	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+  lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+  ignore = update-index --assume-unchanged
+  unignore = update-index --no-assume-unchanged
+  ignored = !git ls-files -v | grep "^[[:lower:]]"
 [push]
   default = simple
 [core]
@@ -51,3 +54,6 @@
 	trustExitCode = true
 [branch]
   autosetuprebase = always
+[filter "media"]
+	clean = git-media-clean %f
+	smudge = git-media-smudge %f
