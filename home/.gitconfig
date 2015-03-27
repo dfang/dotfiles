@@ -17,16 +17,15 @@
   ci = commit
   s = status
   st = status
-  df = diff
-  di = diff
+  d = diff
   dc = diff --cached
   amend = commit --amend
   ff = merge --ff-only
   noff = merge --no-ff
   fa = fetch --all
   ds = diff --stat=160,120
-  dh1 = diff HEAD~1
   unstage = reset HEAD --
+  dh1 = diff HEAD~1
   last = log -1 HEAD
   switch = !legit switch \"$@\"
   branches = !legit branches
@@ -36,24 +35,16 @@
   sync = !legit sync \"$@\"
   publish = !legit publish \"$@\"
   graft = !legit graft \"$@\"
-  today = log --since=midnight --author='dfang' --oneline
   lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
   ignore = update-index --assume-unchanged
   unignore = update-index --no-assume-unchanged
   ignored = !git ls-files -v | grep "^[[:lower:]]"
+  today = log --since=midnight --author='dfang' --oneline
+	changed = whatchanged
 [push]
   default = simple
 [core]
 	excludesfile = /Users/dfang/.gitignore_global
   pager = `brew --prefix git`/share/git-core/contrib/diff-highlight/diff-highlight | less
-[difftool "sourcetree"]
-	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
-	path =
-[mergetool "sourcetree"]
-	cmd = /opt/homebrew-cask/Caskroom/sourcetree/1.8.0.3/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
-	trustExitCode = true
 [branch]
   autosetuprebase = always
-[filter "media"]
-	clean = git-media-clean %f
-	smudge = git-media-smudge %f
