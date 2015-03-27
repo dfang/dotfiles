@@ -26,7 +26,7 @@
   fa = fetch --all
   ds = diff --stat=160,120
   dh1 = diff HEAD~1
-  unstage = reset HARD --
+  unstage = reset HEAD --
   last = log -1 HEAD
   switch = !legit switch \"$@\"
   branches = !legit branches
