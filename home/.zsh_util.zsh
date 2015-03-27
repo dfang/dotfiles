@@ -123,3 +123,50 @@ func main(){
 EOF
 ) > $GOPATH/src/github.com/dfang/main/main.go
 }
+
+
+
+function list_changed_files_in_commit(){
+  git diff-tree --no-commit-id --name-only -r $1
+}
+
+
+function list_changed_files_in_commit(){
+  git ls-tree --name-only -r $1
+}
+
+
+# rsync 的用法
+#
+# 用rsync -R copy会保持目录结构
+# 如 rsync -R db/database.yml tmp, tmp目录下保持相同的结果, 目录不存在, 会自动创建的
+# cp 或 cp -R 则会把所有的文件都copy到tmp跟目录了
+#
+# 一般情况下这样用rsync -avP 足够, 如果需要保持目录结构, 那就 rsync -avPR
+#
+# rsync 最重要的几个参数
+# -a archive mode, -rlptgoD
+# -v verbose mode, a single -v for a brief summary, two -v flags for more
+# -P --partial --progress
+# -R relative mode
+# -n, --dry-run  dry-run mode
+#
+# -b, --backup            make backups (see --suffix & --backup-dir)
+# -z, --compress          compress file data during the transfer
+# -h, --human-readable    output numbers in a human-readable format
+# --log-file=FILE         log what we're doing to the specified FILE
+# -u, --update            skip files that are newer on the receiver
+# --inplace               update destination files in-place
+# --existing              skip creating new files on receiver
+# --ignore-existing       skip updating files that exist on receiver
+# --delete-before         receiver deletes before transfer (default)
+# --delete-during         receiver deletes during xfer, not before
+# --delete-after          receiver deletes after transfer, not before
+# --delete-excluded       also delete excluded files from dest dirs
+# --ignore-errors         delete even if there are I/O errors
+# --exclude=PATTERN       exclude files matching PATTERN
+# --exclude-from=FILE     read exclude patterns from FILE
+# --include=PATTERN       don't exclude files matching PATTERN
+# --include-from=FILE     read include patterns from FILE
+# --files-from=FILE       read list of source-file names from FILE
+#
