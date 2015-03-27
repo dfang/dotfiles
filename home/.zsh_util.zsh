@@ -1,3 +1,5 @@
+# Press cmd+k, cmd+1 to collapse all in Atom Editor
+
 # search in all bundled gems, very useful when hacking source code
 # http://stackoverflow.com/questions/20044173/there-a-way-to-search-all-bundled-gems-project-directories
 # http://andre.arko.net/2013/05/10/hack-your-bundle-for-fun-and-profit/
@@ -170,3 +172,12 @@ function list_changed_files_in_commit(){
 # --include-from=FILE     read include patterns from FILE
 # --files-from=FILE       read list of source-file names from FILE
 #
+
+
+# useful git workflows
+
+# git config --list
+# git config --global alias.d 'diff'
+
+# how to show whatchanged ?
+# git whatchanged
