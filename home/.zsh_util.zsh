@@ -175,9 +175,13 @@ function list_changed_files_in_commit(){
 
 
 # useful git workflows
-
+#
 # git config --list
 # git config --global alias.d 'diff'
-
+# 
 # how to show whatchanged ?
 # git whatchanged
+#
+# merge but no commit. no fast forward
+# git merge --no-commit --no-ff temp
+# http://stackoverflow.com/questions/8640887/git-merge-without-auto-commit

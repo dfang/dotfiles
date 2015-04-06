@@ -11,21 +11,25 @@
 [alias]
   dh1 = diff HEAD~1         # diff HEAD from last commit
   unstage = reset HEAD --   # 从暂存区中撤销文件的修改
-  amend = commit --amend    
+  amend = commit --amend    # 特别注意--amend重写了提交，如果你已经push到远程了，慎用这条命令
+  undolastcommit = reset --soft HEAD^ # undo last commit
   dc = diff --cached
   aa = add --all
   ai = add -i
   b = branch
-  ba = branch --all
+  a = branch --all
   co = checkout
   ci = commit
+  mg = merge
+  dt = difftool
+  mt = mergetool
   s = status
-  st = status
+  st = status -sb
   d = diff
+  ds = diff --staged
   ff = merge --ff-only
   noff = merge --no-ff
   fa = fetch --all
-  ds = diff --stat=160,120
   last = log -1 HEAD
   switch = !legit switch \"$@\"
   branches = !legit branches
@@ -39,9 +43,24 @@
   ignore = update-index --assume-unchanged
   unignore = update-index --no-assume-unchanged
   ignored = !git ls-files -v | grep "^[[:lower:]]"
+  yesterday = log --since '1 day ago' --oneline --author dfang
   today = log --since=midnight --author='dfang' --oneline
-	changed = whatchanged
+  changed = whatchanged
 [push]
   default = simple
 [branch]
   autosetuprebase = always
+[core]
+	excludesfile = /Users/dfang/.gitignore_global
+  pager = `brew --prefix git`/share/git-core/contrib/diff-highlight/diff-highlight | less
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path =
+[mergetool "sourcetree"]
+	cmd = /opt/homebrew-cask/Caskroom/sourcetree/1.8.0.3/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true
+[branch]
+  autosetuprebase = always
+[filter "media"]
+	clean = git-media-clean %f
+	smudge = git-media-smudge %f
