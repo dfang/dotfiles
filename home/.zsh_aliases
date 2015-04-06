@@ -73,6 +73,7 @@ alias gps='git push'
 alias gsl='git stash list'
 alias gss='git stash save'
 alias gsp='git stash pop'
+alias gsa='git stash apply'
 
 alias grc='git rebase --continue'
 alias grs='git rebase --skip'
@@ -117,6 +118,7 @@ alias devlog='tail -f log/development.log'
 alias testlog='tail -f log/test.log'
 alias prodlog='tail -f log/production.log'
 
+alias annotate_models='annotate --exclude tests,fixtures,factories,serializers'
 # check if a command is available
 function command_exists() { which "$1" >/dev/null 2>/dev/null }
 
