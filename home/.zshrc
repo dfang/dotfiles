@@ -94,3 +94,12 @@ nvm use 0.11.14
 # normally there are two ways to passing args to rake task
 # https://itshouldbeuseful.wordpress.com/2011/11/07/passing-parameters-to-a-rake-task/
 # rake say_hello[eddie], or rake say_hello NAME='eddie'
+
+
+
+### Added by the Heroku Toolbelt
+export PATH="/usr/local/heroku/bin:$PATH"
+
+# use ruby.taobao.org as mirror on local machine(https://ruby-china.org/topics/15534)
+# bundle config mirror.https://rubygems.org  http://ruby.taobao.org
+
