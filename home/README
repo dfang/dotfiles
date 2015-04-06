@@ -26,5 +26,8 @@ if [ -f `brew --prefix`/etc/bash_completion ]; then
   . `brew --prefix`/etc/bash_completion
 fi
 
+# use ruby.taobao.org as mirror on local machine(https://ruby-china.org/topics/15534)
+# bundle config mirror.https://rubygems.org  http://ruby.taobao.org
+
 http://macshuo.com/?p=676
 http://doabit.com/posts/3-from-oh-my-zsh-to-oh-my-fish
