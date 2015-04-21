@@ -90,3 +90,13 @@ nvm use 0.11.14
 
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
+
+# to config mirrors
+# gist.github.com/dfang/c8d5cf6a171615fd0c30
+
+# boot2docker exports
+$(boot2docker shellinit)
+
+# http://superuser.com/a/610025/131138
+unsetopt correct_all
+setopt correct

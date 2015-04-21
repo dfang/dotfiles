@@ -8,6 +8,10 @@ alias bi='bundle install'
 alias bu='bundle update'
 alias be='bundle exec'
 alias bo='bundle open'
+alias bd='boot2docker'
+alias d='docker'
+alias v="vagrant"
+alias pid="ps aux | grep $1"
 alias r='rails'
 alias rk='rake'
 alias rs='rails s'
@@ -83,9 +87,6 @@ alias gitx='open -a GitX .'
 alias glast='git log -n 1'
 
 alias glo="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
-
-alias v="vagrant"
-alias pid="ps aux | grep $1"
 
 alias rap="rake assets:precompile"
 alias capd="cap deploy"
@@ -169,6 +170,7 @@ alias www='cd /usr/local/var/www'
 alias cs='consular start'
 alias ce='consular edit'
 alias c='consular'
+
 export EDITOR='sb'
 export VIEDITOR='sb'
 
@@ -183,3 +185,19 @@ alias z='fasd_cd -d'     # cd, same functionality as j in autojump
 alias zz='fasd_cd -d -i' # cd with interactive selection
 alias j=z
 alias jj=zz
+
+alias csdpl='cap staging db:pull'
+alias csdps='cap staging db:push'
+
+
+alias drm="docker rm"
+alias dps="docker ps"
+
+function da () {
+    docker start $1 && docker attach $1
+}
+
+
+function newbox () {
+    docker run --name $1 --volumes-from=volume_container -it -v /var/run/docker.sock:/var/run/docker.sock -e BOX_NAME=$1 nathanleclaire/devbox
+}
