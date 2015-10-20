@@ -1,8 +1,7 @@
 --skip-bundle
 --skip-test-unit
-
+-d postgresql
 
 # loggers
 ActiveRecord::Base.logger     = Logger.new STDOUT
 ActionController::Base.logger = Logger.new STDOUT
-

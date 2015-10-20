@@ -104,9 +104,10 @@ function download_youtube_video() {
   # first brew install youtube-dl
   # then youtube-dl -v --write-sub --sub-lang en https://www.youtube.com/watch?v=hG-ARy0oqjI
   # you can create an alias like this youtube-dl='youtube-dl -v --write-sub --sub-lang en'
-  youtube-dl -v --write-sub --sub-lang en $1
+  youtube-dl -v --write-sub --sub-lang en --max-quality 720p $1
 }
 alias youtube-dl='youtube-dl -v --write-sub --sub-lang en'
+alias ytdl='youtube-dl'
 
 # create a go boilerplate
 function letsgo(){
@@ -178,10 +179,30 @@ function list_changed_files_in_commit(){
 #
 # git config --list
 # git config --global alias.d 'diff'
-# 
+#
 # how to show whatchanged ?
 # git whatchanged
 #
 # merge but no commit. no fast forward
 # git merge --no-commit --no-ff temp
 # http://stackoverflow.com/questions/8640887/git-merge-without-auto-commit
+
+function remove_all_ds_store_shit_in_current_folder_recursively(){
+  find . -name .DS_Store | xargs rm
+}
+
+function halt_all_vagrant_boxes(){
+  vagrant global-status | awk '$3 == "running"{print $4}' | xargs -I '{}' sh -c 'cd "$1" && vagrant halt'
+}
+
+
+# Q: list only directories
+# $ ls -d */
+# */ is a pattern that matches all of the subdirectories in the current directory (* would match all files and subdirectories; the / restricts it to directories)
+# Note that */ won't match any hidden folders. To include them, either specify them explicitly like ls -d .*/ */
+# $ ls -p | grep "/"
+# $ for f in *;do if [[ -d $f  ]]; then echo $f;fi; done;
+
+
+# Q: list only directories with size
+# $ls -d */ | xargs du -chs

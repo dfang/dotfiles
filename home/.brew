@@ -1,5 +1,7 @@
 #!/bin/bash
 
+export HOMEBREW_CASK_OPTS="--appdir=/Applications"
+
 sudo -v # ask for password only at the beginning
 
 brew update
@@ -23,6 +25,14 @@ brew install autoconf
 brew install rbenv ruby-build rbenv-readline rbenv-gem-rehash rbenv-default-gems rbenv-gemset rbenv-use rbenv-bundler
 rbenv install 2.2.0-dev
 
+brew cask install iterm2
+
+
+brew cask install youdao
+brew cask install qqmusic
+brew cask install qqinput
+
+
 brew install git
 brew install fasd
 brew install ssh-copy-id
@@ -32,6 +42,7 @@ brew install ack
 brew install editorconfig
 brew install tig
 brew install hub
+brew install gh
 brew install --zsh-completion git-now
 brew install legit
 legit install
@@ -51,6 +62,9 @@ brew install ctags
 
 # brew install imagesnap
 # sudo ln -s /usr/local/bin/imagesnap /usr/bin/
+
+
+brew cask install dash
 
 brew install node
 brew install nginx
@@ -75,6 +89,20 @@ brew install zsync
 
 sudo ln -sf /Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl /usr/bin/sb
 
+brew cask install atom
+brew cask install brackets
+brew cask install sublime-text3
+brew cask install textmate
+brew cask install visual-studio-code
+brew cask install textwrangler
+
+
+# transmit
+# transmission
+# handbrake
+# mplayerx
+# utorrent
+
 # brew install imagemagick
 # brew install sphinx
 # brew install solr
@@ -88,3 +116,112 @@ sudo ln -sf /Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl /usr
 # brew install go
 # brew install fsharp
 # brew install typescript
+docker
+docker-swarm
+
+brew cask install boot2docker
+brew cask install docker-compose
+brew cask install docker-machine
+brew cask install coreos-osx-gui
+brew cask install consul
+brew cask install consul-template
+brew cask install vault
+brew cask install kitematic
+
+heroku-toolbelt
+gitbook
+gisto
+gitx
+
+go2shell
+
+arq
+dropzone
+
+air-video-server
+charles
+
+kindle
+
+
+typed
+tunnelbear
+
+vagrant
+
+fluid
+google-drive
+kugoumusic
+rubymine
+sparrow
+alfred
+google-web-designer
+macvim
+sequel-pro
+textmate
+appcleaner
+dropbox
+go-server
+growlnotify
+mou
+skype
+bartender
+f-lux
+fluid
+goagentx
+
+sogouinput
+vlc
+beyond-compare
+firefox
+google-chrome-canary
+iboostup
+opera-next
+sourcetree
+
+
+
+
+shadowsocksx
+go-agent
+
+keka
+the-unarchiver
+
+safari-tab-switching
+aliedit
+
+qq
+qqmusic
+qqinput
+neteasemusic
+wechat
+baiducloud
+baiduinput
+baidumusic
+kuaipan
+thunder
+aliwangwang
+
+kindle
+send-to-kindle
+amazon-cloud-drive
+
+typed
+writerpro
+
+已购买
+Fluid(by email:df1228@gmail.com)
+Dash(by app store)
+
+
+缺transmit
+
+
+# http://coletownsend.com/twnsndco/journal/fresh-install-yosemite/
+$ curl -L http://install.ohmyz.sh | sh
+cloudup
+
+
+gem install cocoapods
+gem install xcpretty

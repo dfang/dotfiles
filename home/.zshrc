@@ -37,8 +37,8 @@ if which rbenv > /dev/null; then eval "$(rbenv init - --no-rehash)"; fi
 # set mirror to install nodejs faster
 export NVM_NODEJS_ORG_MIRROR=https://npm.taobao.org/dist
 # this loads brew installed nvm
-[[ -s $(brew --prefix nvm)/nvm.sh ]] && source $(brew --prefix nvm)/nvm.sh
 export NVM_DIR=~/.nvm
+[[ -s $(brew --prefix nvm)/nvm.sh ]] && source $(brew --prefix nvm)/nvm.sh
 
 # add npm support
 export PATH="/usr/local/share/npm/bin:$PATH"
@@ -68,14 +68,14 @@ export PATH="./bin:$PATH"
 
 
 # export PATH=$PATH:/usr/local/opt/go/libexec/bin
-export GOBIN=`go env GOROOT`/bin
+# export GOBIN=`go env GOROOT`/bin
 export GOPATH=$HOME/go
-export GOBIN=$GOPATH/bin:$GOBIN
+# export GOBIN=$GOPATH/bin:$GOBIN
 export PATH=$PATH:$GOPATH/bin
 
 
-rbenv shell 2.1.4
-nvm use 0.11.14
+# rbenv shell 2.1.4
+# nvm use 0.11.14
 
 
 # about passing args to rake task, cap task in zshell
@@ -95,8 +95,25 @@ export PATH="/usr/local/heroku/bin:$PATH"
 # gist.github.com/dfang/c8d5cf6a171615fd0c30
 
 # boot2docker exports
-$(boot2docker shellinit)
+$(boot2docker shellinit 2> /dev/null)
 
 # http://superuser.com/a/610025/131138
 unsetopt correct_all
 setopt correct
+
+
+code () {
+  if [[ $# = 0 ]]
+  then
+      open -a "Visual Studio Code"
+  else
+      [[ $1 = /* ]] && F="$1" || F="$PWD/${1#./}"
+      open -a "Visual Studio Code" --args "$F"
+  fi
+}
+
+# The next line updates PATH for the Google Cloud SDK.
+source '/Users/dfang/google-cloud-sdk/path.zsh.inc'
+
+# The next line enables zsh completion for gcloud.
+source '/Users/dfang/google-cloud-sdk/completion.zsh.inc'

@@ -20,3 +20,5 @@ if defined? FactoryGirl
   # build(:bookmark) now equals FactoryGirl::Factory.build(:bookmark)
   include FactoryGirl::Syntax::Methods
 end
+
+

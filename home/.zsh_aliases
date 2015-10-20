@@ -35,6 +35,7 @@ alias rgu='rails generate uploader'
 alias rdd='rake db:drop'
 alias rdc='rake db:create'
 alias rdm='rake db:migrate'
+alias rdma='rake db:migrate && annotate'
 alias rdmr='rake db:migrate:redo'
 alias rdms='rake db:migrate:status'
 alias rdr='rake db:rollback'
@@ -160,6 +161,10 @@ function bra(){
  open -a Brackets $1
 }
 
+function xcode(){
+ open -a Xcode $1
+}
+
 function docsets(){
   cd ~/Dropbox/PREFRENCES/Dash/docsets/
   open ~/Dropbox/PREFRENCES/Dash/docsets/
@@ -190,14 +195,34 @@ alias csdpl='cap staging db:pull'
 alias csdps='cap staging db:push'
 
 
-alias drm="docker rm"
-alias dps="docker ps"
+alias drm='docker rm'
+alias drmi='docker rmi'
+alias dps='docker ps'
+alias dpsa='docker ps -a'
+alias dia='docker images -a'
+
+alias mysnippets='open -a Atom ~/.atom/packages'
+alias open-atom-config='atom ~/.atom'
+alias open-ohmyzsh-config='atom ~/.oh-my-zsh'
+alias open-ssh-config='atom ~/.ssh'
+alias opne-fish-config='atom ~/.oh-my-fish'
 
 function da () {
     docker start $1 && docker attach $1
 }
 
-
 function newbox () {
     docker run --name $1 --volumes-from=volume_container -it -v /var/run/docker.sock:/var/run/docker.sock -e BOX_NAME=$1 nathanleclaire/devbox
+}
+
+function xcode(){
+ open -a Xcode $1
+}
+
+function xcode-beta(){
+ open -a Xcode-beta $1
+}
+
+function sb(){
+  open -a Sublime\ Text $1
 }
