@@ -1,2 +1,4 @@
 .config/*
 .vim/*
+.DS_Store
+*.swp
