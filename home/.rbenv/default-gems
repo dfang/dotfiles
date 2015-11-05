@@ -2,6 +2,7 @@ homesick
 mackup
 berkshelf
 knife-solo
+chef
 
 consular-iterm
 awesome_print
@@ -10,9 +11,10 @@ cape
 foreman
 dotenv
 rubocop
+cocoapods
 
 nomad-cli
-
+# annotate
 # font-awesome-rails
 # messengerjs-rails
 # haml-rails
