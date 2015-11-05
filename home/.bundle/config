@@ -1,3 +1,1 @@
----
-BUNDLE_MIRROR__HTTPS://RUBYGEMS.ORG: https://ruby.taobao.org
-BUNDLE_BUILD__LIBV8: "--with-system-v8"
+/Users/dfang/Dropbox/Mackup/.bundle/config
