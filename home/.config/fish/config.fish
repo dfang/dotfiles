@@ -10,3 +10,9 @@ source $OMF_PATH/init.fish
 if test -e ~/.aliases
   source ~/.aliases
 end
+
+
+# Prepend a path to $PATH
+set -x PATH ~/bin $PATH
+set -x PATH ~/.bin $PATH
+set -x PATH ./bin $PATH

@@ -27,5 +27,10 @@ echo $cwd
 
 
 links:
+[homesick](https://github.com/technicalpickles/homesick)
+[mackup](https://github.com/lra/mackup)
+[my dotfiles](https://github.com/dfang/dotfiles)  
 [oh-my-fish](git.io/oh-my-fish)
 [oh-my-zsh](ohmyz.sh)
+[zsh documentation](http://zsh.sourceforge.net/Doc/Release/zsh_toc.html)
+[Unix Shells: Bash, Fish, Ksh, Tcsh, Zsh comparison](http://hyperpolyglot.org/unix-shells)
