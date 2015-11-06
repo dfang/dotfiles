@@ -1,0 +1,29 @@
+First of all, install youtube-dl
+    brew install youtube-dl
+    or pip install youtube-dl
+
+######### Check all available downloadable formats
+youtube-dl https://www.youtube.com/watch?v=T8_tOrJHIr8 -F
+
+######### Download specified format
+youtube-dl https://www.youtube.com/watch?v=T8_tOrJHIr8 -f  137+140
+
+######### Merge audio and video
+if No sound from downloaded youtube videos #1752
+this is because for youtube videos, formats tagged as DASH video only contains the video, while the DASH audio versions contain the audio.
+
+######### You can merge them into one with ffmpeg
+ffmpeg -i AUDIO -i VIDEO -acodec copy -vcodec copy OUTPUT
+https://www.youtube.com/watch?v=eXfp4S1xZsw
+
+######### Get video information with ffmpeg
+mp4box -info  video.mp4   # mp4box is great when working with mp4s
+ffmpeg -i video.mp4
+
+######## Extract audio from a mp4 file
+ffmpeg -i input.mp4 -acodec copy output.acc
+
+links:  
+http://rg3.github.io/youtube-dl/
+http://en.savefrom.net
+http://askubuntu.com/questions/421959/convert-downloaded-youtube-videos-downloaded-with-youtube-dl-to-audio-only-wi

@@ -1,28 +1,28 @@
-function da(){
-  docker start $ && docker attach $1
-}
+function da
+  docker start $ ;and docker attach $1
+end
 
-function newbox(){
+function newbox
   docker run --name $1 --volumes-from=volume_container -it -v /var/run/docker.sock:/var/run/docker.sock -e BOX_NAME=$1 nathanleclaire/devbox
-}
+end
 
-function xcode(){
+function xcode
   open -a Xcode $1
-}
+end
 
-function sb(){
+function sb
   open -a Sublime\ Text $1
-}
+end
 
-function bra(){
+function bra
   open -a Brackets $1
-}
+end
 
-function xcode(){
+function xcode
   open -a Xcode $1
-}
+end
 
-function docsets(){
+function docsets
   cd ~/Dropbox/PREFRENCES/Dash/docsets/;
   open ~/Dropbox/PREFRENCES/Dash/docsets/;
-}
+end

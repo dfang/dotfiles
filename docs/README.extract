@@ -1,0 +1,19 @@
+in fish, you can use oh-my-fish and extract plugin
+in zsh, you can use oh-my-zsh and extract plugin
+or tar
+
+
+
+
+
+Extract a *.tar file using option xvf
+$ tar xvf archive_name.tar
+x – extract files from archive
+
+Extract a gzipped tar archive ( *.tar.gz ) using option xvzf
+Use the option z for uncompressing a gzip tar archive.
+$ tar xvfz archive_name.tar.gz
+
+Extracting a bzipped tar archive ( *.tar.bz2 ) using option xvjf
+Use the option j for uncompressing a bzip2 tar archive.
+$ tar xvfj archive_name.tar.bz2

@@ -1,1 +1,4 @@
 .DS_Store
+home/.config/fish/fish_history
+home/.config/fish/fishd*
+.vim

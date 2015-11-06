@@ -22,6 +22,7 @@ source $ZSH/oh-my-zsh.sh
 eval "$(fasd --init auto)"
 
 [[ -f $HOME/.exports ]] && source $HOME/.exports
+[[ -f $HOME/.aliases ]] && source $HOME/.aliases
 [[ -f $HOME/.zsh_aliases ]] && source $HOME/.zsh_aliases
 [[ -f $HOME/.ssh_aliases ]] && source $HOME/.ssh_aliases
 [[ -f $HOME/.zsh_util.zsh ]] && source $HOME/.zsh_util.zsh

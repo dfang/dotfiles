@@ -1,0 +1,169 @@
+### aliases generally available in any shell
+
+alias ..='cd ..'
+alias ...='cd ../..'
+alias ....='cd ../../..'
+alias -='cd -'
+alias sl='ls' # fix typo
+
+alias sl='ls' # fix typo
+alias l='ls -alh'
+
+
+
+alias l='ls -alh'
+alias ll='ls -al'
+alias la='ls -a'
+alias ld="ls -l| grep '^d'"
+
+alias dropbox='cd ~/Dropbox'
+alias dev='cd ~/Development'
+alias doc='cd ~/Documents'
+alias www='cd /usr/local/var/www'
+
+alias r='rails'
+alias g='git'
+alias o='open'
+alias b='bundle'
+alias v='vagrant'
+alias m='meteor'
+
+
+alias b='bundle'
+alias bi='bundle install'
+alias bu='bundle update'
+alias be='bundle exec'
+alias bo='bundle open'
+alias bd='boot2docker'
+alias d='docker'
+alias v="vagrant"
+alias pid="ps aux | grep $1"
+alias r='rails'
+alias rk='rake'
+alias rs='rails s'
+alias ts='thin start'
+alias fs='foreman start'
+
+alias cstart="consular start"
+alias cedit="consular edit"
+alias c='consular'
+alias o='open'
+
+# -------------------------------------------------------------------
+# Git aliases
+# -------------------------------------------------------------------
+alias g='git'
+alias ga='git add'
+alias gb='git branch'
+alias gba='git branch -a'
+alias gci='git commit'
+alias gcl='git clone'
+alias gco='git checkout'
+alias gd='git diff'
+alias gdc='git diff --cached'
+alias gdh='git diff HEAD'
+alias gds='git diff --stat'
+alias gdw='git diff --word-diff'
+alias gitx='open -a GitX .'
+alias gl='git log'
+alias glast='git log -n 1'
+alias glo="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
+alias gm='git commit -m'
+alias gma='git commit -am'
+alias gpl='git pull'
+alias gps='git push'
+alias gr='git remote'
+alias gra='git rebase --abort'
+alias grc='git rebase --continue'
+alias grs='git rebase --skip'
+alias grv='git remote -v'
+alias gs='git status'
+alias gsa='git stash apply'
+alias gsh='git show'
+alias gsl='git stash list'
+alias gsp='git stash pop'
+alias gss='git stash save'
+alias gst='git status'
+alias gst='git status'
+
+
+
+# -------------------------------------------------------------------
+# Rails aliases
+# -------------------------------------------------------------------
+alias rc='rails c'
+alias rdb='rails db'
+alias rr='rake routes'
+alias rg='rails generate'
+alias rgm='rails generate migration'
+alias rgr='rails generate resource'
+alias rgg='rails generate generator'
+alias rgs='rails generate scafold'
+alias rgo='rails generate observer'
+alias rgt='rails generate task'
+alias rga='rails generate assets'
+alias rgc='rails generate controller'
+alias rgce='rails generate cell'
+alias rgh='rails generate helper'
+alias rgu='rails generate uploader'
+alias rdd='rake db:drop'
+alias rdc='rake db:create'
+alias rdm='rake db:migrate'
+alias rdma='rake db:migrate; annotate'
+alias rdmr='rake db:migrate:redo'
+alias rdms='rake db:migrate:status'
+alias rdr='rake db:rollback'
+alias rds='rake db:seed'
+alias rdst='rake db:setup'
+alias rdrst='rake db:reset'
+alias rkmw='rake middleware'
+alias migrate='rake db:migrate; rake db:migrate RAILS_ENV=test'
+alias rap="rake assets:precompile"
+
+alias capd="cap deploy"
+alias cappd="cap production deploy"
+alias capsd="cap staging deploy"
+alias csdpl='cap staging db:pull'
+alias csdps='cap staging db:push'
+
+alias annotate_models='annotate --exclude tests,fixtures,factories,serializers'
+
+alias tlog='tail -f log/development.log'
+alias devlog='tail -f log/development.log'
+alias testlog='tail -f log/test.log'
+alias prodlog='tail -f log/production.log'
+
+# -------------------------------------------------------------------
+# Docker aliases
+# -------------------------------------------------------------------
+alias drm='docker rm'
+alias drmi='docker rmi'
+alias dps='docker ps'
+alias dpsa='docker ps -a'
+alias dia='docker images -a'
+
+alias bsl='brew services list'
+alias bsr='brew services restart'
+
+
+alias quit='exit'
+alias cls='clear'
+alias pid='ps aux | grep -v grep | grep $1'
+alias pyserver='python -m SimpleHTTPServer $1'
+alias header='curl -I $1'
+alias ssh-keys='ls -l ~/.ssh'
+
+
+# -------------------------------------------------------------------
+# fasd/autojump aliases
+# -------------------------------------------------------------------
+alias a='fasd -a'        # any
+alias s='fasd -si'       # show / search / select
+alias d='fasd -d'        # directory
+alias f='fasd -f'        # file
+alias sd='fasd -sid'     # interactive directory selection
+alias sf='fasd -sif'     # interactive file selection
+alias z='fasd_cd -d'     # cd, same functionality as j in autojump
+alias zz='fasd_cd -d -i' # cd with interactive selection
+alias j=z
+alias jj=zz

@@ -1,0 +1,31 @@
+FISH SHELL 和其他shell 不同的地方
+
+1. export 环境变量的时候要用set -x
+set -x foo bar
+echo $foo
+
+2. ``要用（）
+set cwd (pwd)
+echo $cwd
+
+3. use alt+up instead of !$ in other shells
+
+4. && not work in fish shell
+
+5. chains commands in fish shell
+
+
+
+
+
+~/.config/omf  # oh-my-fish default config
+~/.config/fish/config.fish # fish config file
+
+~/.atom # atom config
+~/.rbenv # rbenv default root
+~/.oh-my-zsh # oh-my-zsh default root
+
+
+links:
+[oh-my-fish](git.io/oh-my-fish)
+[oh-my-zsh](ohmyz.sh)
