@@ -1,4 +1,5 @@
 # Customize Oh My Fish installation path(~/.local/share/omf by default)
+# set -gx OMF_PATH {{OMF_PATH}}
 set -gx OMF_PATH ~/.oh-my-fish
 
 # Customize Oh My Fish configuration path(~/.config/omf by default)
@@ -16,3 +17,9 @@ end
 set -x PATH ~/bin $PATH
 set -x PATH ~/.bin $PATH
 set -x PATH ./bin $PATH
+
+# comment out here because oh my fish rbenv plugin support this
+# set PATH /usr/local/bin $PATH
+# set PATH ~/.rbenv/shims $PATH
+
+set PATH $HOME/.meteor $PATH

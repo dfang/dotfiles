@@ -1,5 +1,7 @@
-# use fasd plugin for oh-my-fish
+# use osx plugin for oh-my-fish
+alias rm='trash'
 
+# use fasd plugin for oh-my-fish
 alias a='fasd -a'        # any
 alias s='fasd -si'       # show / search / select
 alias d='fasd -d'        # directory
@@ -10,6 +12,26 @@ alias z='fasd_cd -d'     # cd, same functionality as j in autojump
 alias zz='fasd_cd -d -i' # cd with interactive selection
 alias j=z
 alias jj=zz
+
+alias gfl="git fetch ;and git lg" # Git fetch and show log
+
+# search in all bundled paths
+function ags
+  # ag -S "$@" `bundle show --paths`
+end
+
+# make a directory and cd into it
+function mdc
+  echo "make a new directory $1, then cd into it"
+  mkdir -p "$1" ;and cd "$1"
+end
+alias mcd=mdc
+
+# copy database.yml.example to database.yml
+function copy_database_yml
+  cp config/database.yml.example config/database.yml
+end
+
 
 
 function da

@@ -1,3 +1,5 @@
+alias gfl="git fetch && git lg" # Git fetch and show log
+
 function da(){
   docker start $ && docker attach $1
 }

@@ -39,7 +39,7 @@ function use_rails4_bin(){
   git add bin                   # Add bin/ to source control
 }
 
-# make directory and change to it
+# make a directory and cd into it
 function mdc(){
   echo "make a new directory $1, then cd into it"
   mkdir -p "$1" && cd "$1"
@@ -194,6 +194,14 @@ function remove_all_ds_store_shit_in_current_folder_recursively(){
 function halt_all_vagrant_boxes(){
   vagrant global-status | awk '$3 == "running"{print $4}' | xargs -I '{}' sh -c 'cd "$1" && vagrant halt'
 }
+
+
+# check if a command is available
+function command_exists() { which "$1" >/dev/null 2>/dev/null }
+
+if command_exists vim; then
+  alias vi='vim'
+fi
 
 
 # Q: list only directories

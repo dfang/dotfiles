@@ -16,3 +16,6 @@ alias ll='ls -l'
 # add direnv support
 eval "$(direnv hook bash)"
 
+if [ -f "$HOME/.aliases" ]; then
+  . "$HOME/.aliases"
+fi

@@ -6,8 +6,6 @@ alias ....='cd ../../..'
 alias sl='ls' # fix typo
 alias l='ls -alh'
 
-
-
 alias l='ls -alh'
 alias ll='ls -al'
 alias la='ls -a'
@@ -80,7 +78,6 @@ alias gsh='git show'
 alias gsl='git stash list'
 alias gsp='git stash pop'
 alias gss='git stash save'
-alias gst='git status'
 alias gst='git status'
 
 
@@ -164,3 +161,39 @@ alias z='fasd_cd -d'     # cd, same functionality as j in autojump
 alias zz='fasd_cd -d -i' # cd with interactive selection
 alias j=z
 alias jj=zz
+
+
+
+
+
+alias update_freedom_routes='curl -L http://dl.saber.li/freedom-routes/mac/routes-up.sh | sudo sh'
+alias remove_freedom_routes='curl -L http://dl.saber.li/freedom-routes/mac/routes-down.sh | sudo sh'
+
+
+
+
+
+
+
+
+# only show hidden files and directory
+alias lh='ls -a | egrep "^\."'
+
+# only listing directories
+# find . -maxdepth 1 -type d -name [^\.]\* | sed 's:^\./::'
+# find * -maxdepth 0 -type d
+# tree -d -L 1 -i --noreport
+# ls -l | grep '^d'
+
+
+# if not passing arguments , just ssh-copy-id default public key
+# alias ssh-copy-id="ssh-copy-id -i ~/.ssh/id_rsa.pub $1"
+
+alias lf='ls *(.)' # list just files
+alias ld='ls *(/)' # list just directories *N*
+
+# To list only matching dot files , add -maxdepth 1 to not walk into path recursively
+# find . -type f -name ".*" -maxdepth 1
+
+# To list only matching dot directories
+# find . -type d -name ".*" -maxdepth 1
