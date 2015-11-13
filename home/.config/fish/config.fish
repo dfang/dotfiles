@@ -23,3 +23,4 @@ set -x PATH ./bin $PATH
 # set PATH ~/.rbenv/shims $PATH
 
 set PATH $HOME/.meteor $PATH
+set -gx NVM_DIR (brew --prefix nvm)

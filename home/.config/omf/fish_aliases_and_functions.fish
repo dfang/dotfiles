@@ -10,6 +10,7 @@ alias sd='fasd -sid'     # interactive directory selection
 alias sf='fasd -sif'     # interactive file selection
 alias z=j
 
+alias sb=subl
 
 alias gfl="git fetch ;and git lg" # Git fetch and show log
 
@@ -44,9 +45,9 @@ function xcode
   open -a Xcode $1
 end
 
-function sb
-  open -a Sublime\ Text $1
-end
+# function sb
+#   open -a Sublime\ Text $1
+# end
 
 function bra
   open -a Brackets $1
