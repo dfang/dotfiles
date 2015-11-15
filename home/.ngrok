@@ -1,0 +1,23 @@
+server_addr: "ngrok.natapp.cn:4443"
+trust_host_root_certs: false
+
+tunnels:
+  example:
+    proto:
+      http: 3000
+  client:
+    subdomain: "client"
+    auth: "user:password"
+    proto:
+      http: 8080
+
+# server_addr: "tunnel.qydev.com:4443"
+# trust_host_root_certs: false
+
+# Usage:
+# note: please use ngrok client download from natapp.cn or qydev.com instead of brew cask installed version and use ngrok version 1.6 instead of 2.0
+
+# ./ngrok 0.0.0.0:5000
+# ./ngrok -subdomain dfang 0.0.0.0:5000
+# ./ngrok start example client
+
