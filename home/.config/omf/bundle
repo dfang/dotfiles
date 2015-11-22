@@ -1,4 +1,19 @@
 package bundler
-package foreign-env
 package nvm
+package brew
+package rbenv
+package copy
+package fasd
+package fzf
+package hub
+package osx
+package sublime
+package extract
+package foreign-env
+package gi
+package kill-on-port
+package omf
+package thefuck
 theme default
+
+
