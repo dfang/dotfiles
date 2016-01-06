@@ -9,7 +9,8 @@ alias f='fasd -f'        # file
 alias sd='fasd -sid'     # interactive directory selection
 alias sf='fasd -sif'     # interactive file selection
 alias z=j
-
+alias metero=meteor
+alias metoer=meteor
 alias sb=subl
 
 alias gfl="git fetch ;and git lg" # Git fetch and show log

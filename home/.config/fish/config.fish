@@ -7,3 +7,4 @@ set -gx OMF_CONFIG ~/.config/omf
 
 # Load oh-my-fish configuration.
 source $OMF_PATH/init.fish
+. ~/.ssh_aliases

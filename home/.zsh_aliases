@@ -28,3 +28,21 @@ function docsets(){
   cd ~/Dropbox/PREFRENCES/Dash/docsets/;
   open ~/Dropbox/PREFRENCES/Dash/docsets/;
 }
+
+function mirror_site(){
+  wget \
+     --recursive \
+     --no-clobber \
+     --page-requisites \
+     --html-extension \
+     --convert-links \
+     --limit-rate=200k \
+     --user-agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_1) AppleWebKit/601.2.7 (KHTML, like Gecko) Version/9.0.1 Safari/601.2.7" \
+     --mirror \ 
+     -p \
+     --convert-links \
+     --domains wise.io \
+     --no-parent \
+         www.wise.io
+
+}
