@@ -119,3 +119,7 @@ source '/Users/dfang/google-cloud-sdk/path.zsh.inc'
 # The next line enables zsh completion for gcloud.
 source '/Users/dfang/google-cloud-sdk/completion.zsh.inc'
 export PATH=/opt/chefdk/embedded/bin:/Users/dfang/google-cloud-sdk/bin:/usr/local/heroku/bin:./bin:/usr/local/share/npm/bin:/Users/dfang/.rbenv/shims:/Users/dfang/bin:/usr/local/bin:~/bin:/usr/local/bin:/usr/local/sbin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/usr/local/go/bin:/Users/dfang/go/bin
+
+
+# add direnv support
+eval "$(direnv hook zsh)"

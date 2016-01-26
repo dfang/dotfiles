@@ -169,7 +169,7 @@ alias remove_freedom_routes='curl -L http://dl.saber.li/freedom-routes/mac/route
 
 
 
-
+alias piv='pod install --verbose'
 
 
 

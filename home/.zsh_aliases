@@ -46,3 +46,7 @@ function mirror_site(){
          www.wise.io
 
 }
+
+function port(){
+  netstat -nulp | grep $1
+}
